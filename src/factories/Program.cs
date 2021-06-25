@@ -1,4 +1,6 @@
 ﻿using System;
+using factories.Interfaces;
+using factories.Factory;
 
 namespace factories
 {
@@ -6,7 +8,12 @@ namespace factories
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var creditCardFactory = new CreditCardFactory();
+
+            ICreditCard cardDetails = creditCardFactory.ReturnCredit("Titanium");
+
+            Console.WriteLine($"Tipo de cartão: {cardDetails.GetCardType()}");
+            Console.WriteLine($"Limite do cartão: R$ {cardDetails.GetCreditLimit()}");
         }
     }
 }
