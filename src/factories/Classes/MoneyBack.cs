@@ -5,17 +5,8 @@ namespace factories.Classes
 {
     public class MoneyBack : ICreditCard
     {
-        public string GetCardType()
-        {
-            return "MoneyBack";
-        }
-        public int GetCreditLimit()
-        {
-            return 15000;
-        }
-        public int GetAnnualCharge()
-        {
-            return 500;
-        }
+        public string GetCardType() => "MoneyBack";
+        public int GetCreditLimit() => 15000;
+        public int GetAnnualCharge() => 500;
     }   
 }
