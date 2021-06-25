@@ -1,22 +1,23 @@
 using System;
 using factories.Classes;
 using factories.Interfaces;
+using factories.Enums;
 
 namespace factories.Factory
 {
     public class CreditCardFactory
     {
-        public ICreditCard ReturnCredit(string cardType)
+        public ICreditCard ReturnCredit(CreditCard cardType)
         {
             switch (cardType)
             {
-                case "MoneyBack":
+                case CreditCard.MoneyBack:
                     return new MoneyBack();
                 
-                case "Titanium":
+                case CreditCard.Titanium:
                     return new Titanium();
 
-                case "Platinum":
+                case CreditCard.Platinum:
                     return new Platinum();
             }
             return null;

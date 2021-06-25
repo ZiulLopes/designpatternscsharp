@@ -1,6 +1,6 @@
 ﻿using System;
-using factories.Interfaces;
 using factories.Factory;
+using factories.Enums;
 
 namespace factories
 {
@@ -10,7 +10,7 @@ namespace factories
         {
             var creditCardFactory = new CreditCardFactory();
 
-            var cardDetails = creditCardFactory.ReturnCredit("Titanium");
+            var cardDetails = creditCardFactory.ReturnCredit(CreditCard.MoneyBack);
 
             Console.WriteLine($"Tipo de cartão: {cardDetails.GetCardType()}");
             Console.WriteLine($"Limite do cartão: R$ {cardDetails.GetCreditLimit()}");
