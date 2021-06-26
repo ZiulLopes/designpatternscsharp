@@ -8,6 +8,9 @@ namespace chainofresponsibility
 {
     class Program
     {
+        
+        public static List<string> Messages = new List<string>() {};
+
         static void Main(string[] args)
         {
             var userCreditCardVerified = new UserCreditCardVerified();
@@ -17,7 +20,7 @@ namespace chainofresponsibility
             var userCreditCard = new UserCreditCardModel()
             {
                 Id = 123,
-                NameUser = "Luiz Lopes",
+                NameUser = "Luiz Lopesfff",
                 CreditCardType = "Black",
                 ActualValue = 195000,
                 DateUsed = new DateTime(2021, 2, 22, 1, 0, 0)
@@ -30,6 +33,8 @@ namespace chainofresponsibility
 
             
             var result = handler.Handle(userCreditCard);
+
+            Console.WriteLine(String.Join("", Messages));
         }
     }
 }
