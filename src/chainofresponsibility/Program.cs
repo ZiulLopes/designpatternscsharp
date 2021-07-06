@@ -20,10 +20,10 @@ namespace chainofresponsibility
             var userCreditCard = new UserCreditCardModel()
             {
                 Id = 123,
-                NameUser = "Luiz Lopesfff",
+                NameUser = "Luiz Lopes",
                 CreditCardType = "Black",
-                ActualValue = 195000,
-                DateUsed = new DateTime(2021, 2, 22, 1, 0, 0)
+                ActualValue = 295000,
+                DateUsed = new DateTime(2021, 2, 22, 11, 0, 0)
             };
 
             userCreditCardVerified.SetNext(actualValueGretherThan200000).SetNext(invalidHourUsedCard);
