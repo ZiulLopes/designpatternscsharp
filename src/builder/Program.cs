@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
+using Builder.Builder;
+using Builder.Classes;
 
 namespace builder
 {
@@ -6,7 +9,19 @@ namespace builder
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            AnimalBuilder builder;
+
+            Shop shop = new Shop();
+
+            builder = new DogBuilder();
+            shop.Construct(builder);
+            builder.Animal.Show();
+            System.Console.WriteLine(builder.Sound());
+
+            builder = new CowBuilder();
+            shop.Construct(builder);
+            builder.Animal.Show();
+            System.Console.WriteLine(builder.Sound());
         }
     }
 }
