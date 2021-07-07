@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using Builder.Builder;
 using Builder.Classes;
 
@@ -16,12 +15,12 @@ namespace builder
             builder = new DogBuilder();
             shop.Construct(builder);
             builder.Animal.Show();
-            System.Console.WriteLine(builder.Sound());
+            Console.WriteLine(builder.Sound());
 
             builder = new CowBuilder();
             shop.Construct(builder);
             builder.Animal.Show();
-            System.Console.WriteLine(builder.Sound());
+            Console.WriteLine(builder.Sound());
         }
     }
 }
