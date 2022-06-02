@@ -1,4 +1,7 @@
 ﻿using System;
+using OpenClosedPrinciple.Classes;
+using OpenClosedPrinciple.Classes.Interfaces;
+using OpenClosedPrinciple.Enums;
 
 namespace OpenClosedPrinciple
 {
@@ -22,39 +25,6 @@ namespace OpenClosedPrinciple
                 default:
                     return new Square();
             }
-        }
-    }
-
-    public enum Shape
-    {
-        None,
-        Square,
-        Circle
-    }
-
-    public interface IDraw
-    {
-        string Drawing();
-    }
-
-    public abstract class Draw : IDraw
-    {
-        public abstract string Drawing();
-    }
-
-    public class Square : IDraw
-    {
-        public string Drawing()
-        {
-            return $"Drawing a square";
-        }
-    }
-
-    public class Circle : IDraw
-    {
-        public string Drawing()
-        {
-            return $"Drawing a circle";
         }
     }
 }
